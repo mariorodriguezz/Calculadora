@@ -1,0 +1,51 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> CALCULADORA </title>
+
+
+	<script type="text/javascript" src="calc.js"> </script>
+    
+	
+</head>
+<body>
+<form name="formulario">
+
+	<table>
+
+		<tr><!--en ontecla llamamos a la funcion a traves del evento onteclapress el return va a llamar a solo numeros y este recive un parametro que era el evento del js -->
+		  <td colspan="5" id="vista"><label>
+		    <input name="valores" type="text"  id="valores" onKeyPress="return numeros(event)" value="">
+		  </label></td>
+		<tr><!-- para llamar la funcion del js retornar num ponemos el evento onteclapress y copiamos la funcion retornar num y en num ponemos values para que nos envie el valor que tenemmos en ela caja de textoevento del js -->
+			<td><input type="button" value="1" onClick="capturar(value)"> </td>
+			<td><input type="button" value="2" onClick="capturar(value)"> </td>
+			<td><input type="button" value="3" onClick="capturar(value)"> </td>
+			<td><input type="button" value="+" onClick="operar(value)"> </td>
+			<td><input type="button" value="-" onclick="operar(value)"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onClick="capturar(value)"> </td>
+			<td><input type="button" value="5" onClick="capturar(value)"> </td>
+			<td><input type="button" value="6" onClick="capturar(value)"> </td>
+			<td><input type="button" value="*" onClick="operar(value)"> </td>
+			<td><input type="button" value="/" onClick="operar(value)"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="capturar(value)"> </td>
+			<td><input type="button" value="8" onclick="capturar(value)"> </td>
+			<td><input type="button" value="9" onclick="capturar(value)"> </td>
+			<td><input type="button" value="0" onclick="capturar(value)"> </td>
+			<!-- para llamar la funcion del js borrar() ponemos  -->
+			<td><input type="button" value="C"onclick="borrar()"> </td>
+						
+		</tr>
+		<tr>			
+			<!-- para llamar la funcion del js resultado() ponemos  -->
+			<td><input type="button" value="=" onClick="calcular()"> </td>
+		</tr>
+		
+	</table>
+</form>
+</body>
+</html>
